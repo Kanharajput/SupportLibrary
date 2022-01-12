@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                            "color", getApplicationContext().getPackageName());    // to get the id of the color name
         // Here we use ContextCompat to run over app over api level below 23 as
         // getColor method works above 23 api level.
-        int colorRes = ContextCompat.getColor(this,colorResourceName);    // to get the color using id like we do in findViewById method
+        // getResources().getColor(colorResourceName,this.getTheme());   // this thing work above 23 api 
+        int colorRes = ContextCompat.getColor(this,colorResourceName);    // to get the color using id like we do in findViewById method // below api level 23
         mHelloTextView.setTextColor(colorRes);
     }
 }
